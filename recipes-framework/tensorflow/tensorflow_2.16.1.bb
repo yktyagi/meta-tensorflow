@@ -58,6 +58,7 @@ do_configure:append () {
 
     CT_NAME=$(echo ${HOST_PREFIX} | rev | cut -c 2- | rev)
     SED_COMMAND="s#%%CT_NAME%%#${CT_NAME}#g"
+    SED_COMMAND="${SED_COMMAND}; s#%%UNPACKDIR%%#${UNPACKDIR}#g"
     SED_COMMAND="${SED_COMMAND}; s#%%WORKDIR%%#${WORKDIR}#g"
     SED_COMMAND="${SED_COMMAND}; s#%%YOCTO_COMPILER_PATH%%#${BAZEL_OUTPUTBASE_DIR}/external/yocto_compiler#g"
 

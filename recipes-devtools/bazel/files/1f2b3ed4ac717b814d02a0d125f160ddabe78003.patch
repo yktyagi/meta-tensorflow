@@ -9,6 +9,8 @@ Partial commit for third_party/*, see #17987.
 
 Closes #17987
 
+Upstream-Status: Inappropriate [oe specific]
+
 Signed-off-by: Yun Peng <pcloudy@google.com>
 
 Upstream-Status: Backport [https://github.com/bazelbuild/bazel/commit/1f2b3ed4ac717b814d02a0d125f160ddabe78003]
