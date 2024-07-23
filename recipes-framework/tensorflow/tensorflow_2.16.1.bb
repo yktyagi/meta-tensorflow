@@ -180,3 +180,4 @@ python __anonymous() {
 }
 
 COMPATIBLE_HOST:arm = "null"
+INSANE_SKIP:python3-tensorflow += "buildpaths"

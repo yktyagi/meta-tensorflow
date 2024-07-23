@@ -52,6 +52,8 @@ do_install () {
     ${STAGING_BINDIR_NATIVE}/pip3 install --disable-pip-version-check -v --no-deps \
         -t ${D}/${PYTHON_SITEPACKAGES_DIR} --no-cache-dir ${WORKDIR}/tf_keras_pip/*.whl
 
+    sed -i 's|${TMPDIR}||g' ${D}${PYTHON_SITEPACKAGES_DIR}/tf_keras-2.16.0.dist-info/direct_url.json
+
     # Provides module keras as usual
     ln -snrf ${D}/${PYTHON_SITEPACKAGES_DIR}/tf_keras ${D}/${PYTHON_SITEPACKAGES_DIR}/keras
 

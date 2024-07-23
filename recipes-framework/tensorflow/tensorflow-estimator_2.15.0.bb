@@ -49,6 +49,7 @@ do_install () {
     install -d ${D}${PYTHON_SITEPACKAGES_DIR}
     ${STAGING_BINDIR_NATIVE}/pip3 install --disable-pip-version-check -v --no-deps \
         -t ${D}/${PYTHON_SITEPACKAGES_DIR} --no-cache-dir ${WORKDIR}/estimator_pip/*.whl
+   sed -i 's|${TMPDIR}||g' ${D}${PYTHON_SITEPACKAGES_DIR}/tensorflow_estimator-2.15.0.dist-info/direct_url.json
 
 }
 
